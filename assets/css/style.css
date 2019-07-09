@@ -1,0 +1,75 @@
+/*-----------------------General----*/
+
+body {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/*-----------------------Navbar----*/
+
+.navbar {
+  margin: 0;
+  border: 0;
+  background-color: #223047;
+  border: 0;
+  color: #f0f1f2;
+}
+
+.navbar-toggler {
+  display: none;
+}
+
+@media (max-width:768px){
+  .navbar-toggler {
+    display: block;
+  }
+}
+
+.navbar-collapse {
+  height: 50px;
+}
+
+.navbar-nav {
+  float: right;
+  padding-right: 30px;
+  list-style: none;
+  height: 50px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #f0f1f2;
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0;
+  padding-top: 0;
+  width: 100%;
+  display: block;
+}
+
+.hvr-sweep-to-bottom:before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav-item a:hover{
+  color: #fafdff;
+}
+
+/*-----------------------img Slideshow----*/
+
+.slideshow-container {
+  margin: 0;
+}
+
+img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.slideshow-container {
+  position: relative;
+  margin: 0;
+}
