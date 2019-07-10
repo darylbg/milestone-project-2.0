@@ -7,12 +7,11 @@
 
   <title>Document</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap">
   <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-
-  <script type="text/javascript" src="assets/js/main.js"></script>
 
 </head>
 
@@ -36,19 +35,39 @@
     </div>
   </nav>
   <div class="slideshow-container">
-    <div class="mySlide fade">
+    <div class="mySlide">
         <img class="slideshow-img" src="http://uhd-wallpapers.net/1080p/london-eye_565.jpeg" alt="background">
-        <div class="text">hello</div>
+        <div class="centered">Why not Holiday in the UK</div>
     </div>
-    <div class="mySlide fade">
+    <div class="mySlide">
       <img src="http://prod-upp-image-read.ft.com/47e4a07c-7009-11e6-a0c9-1365ce54b926" alt="background">
+      <div class="centered">Why not Holiday in the UK</div>
     </div>
-    <div class="mySlide fade">
+    <div class="mySlide">
       <img src="https://cdn.now.howstuffworks.com/media-content/82a9c274-4ab7-4a22-a1b9-9f12b79bddde-1920-1080.jpg" alt="background">
+      <div class="centered">Why not Holiday in the UK</div>
     </div>
   </div>
+  <section>
+    <div class="holiday col-md-6 col-xs-12">
+      <div class="container">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+          <span class="caret"></span>
+        </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <div id="map"></div>
+    </div>
+  </section>
 
-  <script type="text/javascript" src=""></script>
+  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv6ISbEwJwyyNeS_aD6W-FS-y_37p6zWM&callback=initMap"></script>
   <script type="text/javascript" src="assets/js/main.js" defer></script>
 
 </body>
