@@ -11,7 +11,7 @@ body {
 .navbar {
   margin: 0;
   border: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   border: 0;
   color: #f0f1f2;
   position: fixed;
@@ -216,7 +216,7 @@ img {
   background: rgba(0, 0, 0, 0.2);
   padding-left: 10px;
   padding-right: 10px;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 @media (max-width:900px) {
@@ -270,19 +270,69 @@ img {
 
 /*-----------------------featured holidays section----*/
 
-.featured-holidays-text {
-  margin-top: 50px;
-}
-
 .featured-holidays {
   text-align: center;
+  margin-top: 100px;
+}
+
+@media (min-width:1380px) {
+  .featured-holidays {
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-top: 50px;
+  }
+}
+
+.FH-heading-row {
+  text-align: center;
+  display: block;
+}
+
+.featured-holidays-text p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  float: left;
+}
+
+@media (max-width:768px) {
+  .featured-holidays-text p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    float: none;
+    display: inline-block;
+  }
+}
+
+.stars .fa-star {
+  color: gold;
+  display: inline-block;
+  top: 50%;
+  font-size: 50px;
+  text-shadow: 1px 2px #f29f0f;
+  padding-left: 2px;
+}
+
+
+@media (min-width:1024px) {
+  .stars .fa-star {
+    font-size: 60px;
+    float: left;
+    padding-left: 4px;
+  }
 }
 
 .card {
   height: 350px;
   text-align: center;
-  background-color: #C1A8A2;
-  border-radius: 20px
+  background-color: #04210a;
+  border-radius: 20px;
+  border: 1px solid white;
+  box-shadow: 3px 7px 7px grey;
+}
+
+.card:hover {
+  box-shadow: 10px 17px 8px grey;
+  transition: all 0.5s ease-in-out;
 }
 
 @media (min-width:1024px) {
@@ -291,10 +341,10 @@ img {
   }
 }
 
-.card img {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  max-height: 65%;
+@media (max-width:480px) {
+  .card {
+    height: 280px;
+  }
 }
 
 #featured-holiday-1 {
@@ -303,17 +353,61 @@ img {
   margin-top: 50px;
 }
 
-@media (min-width:900px) {
-  #featured-holiday-1 {
-    padding-left: 20px;
-    padding-right: 20px;
+.card img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 40%;
+}
+
+@media (min-width:1024px) {
+  .card img {
+    height: 45%;
   }
 }
 
-@media (min-width:1200px) {
-  #featured-holiday-1 {
-    padding-left: 40px;
-    padding-right: 40px;
+.card-body {
+  border-top: 1px solid white;
+}
+
+.card-body h4 {
+  font-family: 'Roboto', sans-serif;
+  color: #e6e3df;
+  margin-top: 15px;
+}
+
+.card-body p {
+  font-family: 'Roboto', sans-serif;
+  color: #c4c1bc;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (max-width:768px) {
+  .card-body p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width:480px) {
+  .card-body p {
+    font-size: 13px;
+  }
+}
+
+.card-body a {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 20px;
+  background-color: orange;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  text-shadow: 1px 1px black;
+}
+
+@media (max-width:480px) {
+  .card-body a {
+    margin-top: 4px;
   }
 }
 
@@ -321,17 +415,11 @@ img {
 
 .footer {
   display: block;
-  height: 50px;
+  height: 200px;
   margin-top: 50px;
   background-color: #42474f;
 }
 
-.footer ul {
-  float: right;
-  padding-right: 30px;
-  margin-bottom: 0;
-  height: 100%;
-}
 
 .footer ul li {
   display: inline-block;
@@ -360,4 +448,5 @@ img {
 
 .footer ul li a:hover {
   background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid green;
 }

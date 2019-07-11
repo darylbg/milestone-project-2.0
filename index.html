@@ -17,10 +17,10 @@
 </head>
 
 <body>
-  <nav id="navbar" class="navbar navbar-expand-lg">
+  <nav id="navbar" class="navbar navbar-expand-lg">         <!-----navigation bar----->
     <a class="navbar-brand" href="#"><span class="navbar-brand-img"><img src="https://rlv.zcache.co.uk/yoga_and_beach_jigsaw_puzzle-rcda07d930ccc4c439be499bc38775ae4_ambtl_8byvr_307.jpg?rvtype=content" alt="brand-img"></span>Holiday UK</a>
     <div class="dropdown visible-xs">
-      <button onclick="myFunction()" class="dropbtn fa fa-bars"></button>
+      <button onclick="myFunction()" class="dropbtn fa fa-bars"></button>           <!-----navigation button for small devices----->
       <div id="myDropdown" class="dropdown-content">
         <a href="#"><i class="fa fa-home"></i><text>Home</text></a>
         <a href="#"><i class="fa fa-picture-o"></i><text>Holidays</text></a>
@@ -41,7 +41,7 @@
       </ul>
     </div>
   </nav>
-  <div class="slideshow-container">
+  <div class="slideshow-container">                       <!-----image carousel----->
     <div class="mySlide">
       <img id="fade" class="slideshow-img" src="http://uhd-wallpapers.net/1080p/london-eye_565.jpeg" alt="background">
       <div class="centered">Why not Holiday in the UK</div>
@@ -56,7 +56,7 @@
     </div>
   </div>
 
-  <section class="destination-locator container-fluid">
+  <section class="destination-locator container-fluid">       <!-----holiday location selector section----->
     <div class="row">
       <div class="holiday col-md-6 col-xs-12">
         <div class="button-selection">
@@ -71,66 +71,96 @@
         </div>
       </div>
       <div class="col-md-6 col-xs-12">
-        <div id="map"></div>
+        <div id="map"></div>                <!-----uk holiday picker map----->
       </div>
     </div>
   </section>
 
-  <section class="featured-holidays container-fluid">
-      <div class="featured-holidays-text">
-        <p>Featured Holidays</p>
+  <section class="featured-holidays container-fluid">         <!-----some featured holiday cards----->
+    <div class="row">
+      <div class="featured-holidays-text col-xl-3 col-lg-5 col-md-7 col-sm-12 col-xs-12">
+        <p>Featured Holiday Deals</p>
       </div>
-      <div class="row">
-      <div id="featured-holiday-1" class="col-md-3 col-sm-4 col-xs-6 col d-flex justify-content-center">
-        <div class="card">
+      <div class="stars col-xl-9 col-lg-7 col-md-5 col-sm-12 col-xs-12">
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+      </div>
+    </div>
+    <div class="row FH-heading-row">
+      <div id="featured-holiday-1" class="col-lg-2 col-md-3 col-sm-4 col-xs-6">  <!-----holiday card 1----->
+        <div class="card hvr-float">
           <img class="card-img-top" src="https://www.jezdicksonphotography.co.uk/wp-content/uploads/2015/12/corinthia-hotel-weddings-0010.jpg" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Corinthia Hotel</h4>
-            <p class="card-text">Getaway for two to Corinthia Hotel London</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <p class="card-text">Holiday for two, Corinthia Hotel London</p>
+            <a href="https://www.booking.com/hotel/gb/corinthia-london.en-gb.html" target="_blank" class="btn btn-primary btn-lg hvr-wobble-bottom">LET'S GO!</a>
           </div>
         </div>
       </div>
-      <div id="featured-holiday-1" class="col-md-3 col-sm-4 col-xs-6">
-        <div class="card">
+      <div id="featured-holiday-1" class="col-lg-2 col-md-3 col-sm-4 col-xs-6">       <!-----holiday card 2----->
+        <div class="card hvr-float">
           <img class="card-img-top" src="https://www.roughguides.com/wp-content/uploads/2018/05/Portree_shutterstock_144467050-900x552.jpg" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">PORTREE</h4>
             <p class="card-text">Getaway to PORTREE (SKYE), INNER HEBRIDES</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="https://www.holidaylettings.co.uk/portree/" target="_blank" class="btn btn-primary btn-lg hvr-wobble-bottom">LET'S GO!</a>
           </div>
         </div>
       </div>
-      <div id="featured-holiday-1" class="col-md-3 col-sm-4 hidden-xs">
-        <div class="card">
+      <div id="featured-holiday-1" class="col-lg-2 col-md-3 col-sm-4 hidden-xs">        <!-----holiday card 3----->
+        <div class="card hvr-float">
           <img class="card-img-top" src="https://www.telegraph.co.uk/content/dam/Travel/hotels/europe/united-kingdom/Hotels%20-%20England/devon/gidleigh-park-devon-p-large.jpg" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Gidleigh Park</h4>
             <p class="card-text">Getaway to Gidleigh Park, Chagford Devon</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="https://www.gidleigh.co.uk/" target="_blank" class="btn btn-primary btn-lg hvr-wobble-bottom">LET'S GO!</a>
           </div>
         </div>
       </div>
-      <div id="featured-holiday-1" class="col-md-3 hidden-sm hidden-xs">
-        <div class="card">
-          <img class="card-img-top" src="https://www.telegraph.co.uk/content/dam/Travel/hotels/europe/united-kingdom/Hotels%20-%20England/devon/gidleigh-park-devon-p-large.jpg" alt="Card image cap">
+      <div id="featured-holiday-1" class="col-lg-2 col-md-3 hidden-sm hidden-xs">       <!-----holiday card 4----->
+        <div class="card hvr-float">
+          <img class="card-img-top" src="https://visitbath.co.uk/images/uploads/site/_1000px/thermae_hero.jpg" alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title">Gidleigh Park</h4>
-            <p class="card-text">Getaway to Gidleigh Park, Chagford Devon</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h4 class="card-title">Roman baths</h4>
+            <p class="card-text">Getaway to Bath</p>
+            <a href="https://www.romanbaths.co.uk/" target="_blank" class="btn btn-primary btn-lg hvr-wobble-bottom">LET'S GO!</a>
+          </div>
+        </div>
+      </div>
+      <div id="featured-holiday-1" class="col-lg-2 hidden-md hidden-sm hidden-xs">   <!-----holiday card 5----->
+        <div class="card hvr-float">
+          <img class="card-img-top" src="http://www.visitscotland.com/cms-images/campaigns/eu/363828/edinburgh-castle-and-ross-fountain-1" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Edinburgh</h4>
+            <p class="card-text">Getaway to Edinburgh</p>
+            <a href="https://www.expedia.co.uk/Edinburgh.d6069845.Holidays-City-Breaks" target="_blank" class="btn btn-primary btn-lg hvr-wobble-bottom">LET'S GO!</a>
+          </div>
+        </div>
+      </div>
+      <div id="featured-holiday-1" class="col-lg-2 hidden-md hidden-sm hidden-xs">       <!-----holiday card 6----->
+        <div class="card hvr-float">
+          <img class="card-img-top" src="https://images.theconversation.com/files/193960/original/file-20171109-27120-1sl4qpb.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Isle of Man</h4>
+            <p class="card-text">Getaway to the Isle of Man</p>
+            <a href="https://www.cottages.com/isle-of-man" target="_blank" class="btn btn-primary btn-lg hvr-wobble-bottom">LET'S GO!</a>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <footer>
+  <footer>           <!-----footer with contact info...social media...etc...----->
     <div class="footer">
-      <ul>
-        <li><a href=""><i class="fa fa-facebook"></i></a></li>
-        <li><a href=""><i class="fa fa-instagram"></i></a></li>
-        <li><a href=""><i class="fa fa-twitter"></i></a></li>
-        <li><a href=""><i class="fa fa-youtube"></i></a></li>
-      </ul>
+      <div class="contact col-md-6 col-sm-12 col-xs-12">    <!-----contact form and info----->
+        <!----form----->
+      </div>
+      <div class="social-icons col-md-6 col-sm-12 col-xs-12">    <!-----social media icons----->
+        <ul>
+          <li><a href="https://en-gb.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://twitter.com/login?lang=en-gb" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 

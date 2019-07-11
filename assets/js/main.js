@@ -1,4 +1,4 @@
-//----menu scroll hide and showSlides
+//----menu scroll/hide/show
 
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
@@ -30,7 +30,7 @@ window.onclick = function(event) {
   }
 }
 
-//----landing page image carousel
+//----landing page image carousel slideshow
 
 var slideSet = 0;
 
@@ -49,7 +49,7 @@ var showSlides = () => {
 
 showSlides();
 
-//------map apikey section
+//------map apikey and location plotting/labels
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
