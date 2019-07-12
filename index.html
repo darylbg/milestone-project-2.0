@@ -23,8 +23,8 @@
       <button onclick="myFunction()" class="dropbtn fa fa-bars"></button>           <!-----navigation button for small devices----->
       <div id="myDropdown" class="dropdown-content">
         <a href="#"><i class="fa fa-home"></i><text>Home</text></a>
-        <a href="#"><i class="fa fa-picture-o"></i><text>Holidays</text></a>
-        <a href="#"><i class="fa fa-comments-o"></i><text>Contact Us</text></a>
+        <a href="#holiday-selector"><i class="fa fa-picture-o"></i><text>Holidays</text></a>
+        <a href="#contact-section"><i class="fa fa-comments-o"></i><text>Contact Us</text></a>
       </div>
     </div>
     <div class="collapse navbar-collapse" id="navbarShrink">
@@ -33,10 +33,10 @@
           <a class="nav-link hvr-sweep-to-bottom" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link hvr-sweep-to-bottom" href="#">Holiday</a>
+          <a class="nav-link hvr-sweep-to-bottom" href="#holiday-selector">Holiday</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled hvr-sweep-to-bottom" href="#">Contact Us</a>
+          <a class="nav-link disabled hvr-sweep-to-bottom" href="#contact-section">Contact Us</a>
         </li>
       </ul>
     </div>
@@ -56,7 +56,7 @@
     </div>
   </div>
 
-  <section class="destination-locator container-fluid">       <!-----holiday location selector section----->
+  <section id="holiday-selector" class="destination-locator container-fluid">       <!-----holiday location selector section----->
     <div class="row">
       <div class="holiday col-md-6 col-xs-12">
         <div class="button-selection">
@@ -148,12 +148,58 @@
       </div>
     </div>
   </section>
-  <footer>           <!-----footer with contact info...social media...etc...----->
-    <div class="footer">
-      <div class="contact col-md-6 col-sm-12 col-xs-12">    <!-----contact form and info----->
-        <!----form----->
+  <footer id="contact-section" class="footer">
+    <div class="footer-heading-row row">
+      <h2>Contact Us</h2>
+    </div>         <!-----footer with contact info...social media...etc...----->
+    <div class="row contact-row">
+      <div class="hidden-xs col-sm-1 col-md-2 col-lg-3"></div>
+      <div class="contact-email col-lg-3 col-md-4 col-sm-5 col-xs-12">
+        <div class="contact-paragraph">
+          <p>Sign up for exclusive promotions and deals</p>
+        </div>    <!-----contact form and info----->
+        <form>                            <!----form----->
+          <input type="text" name="name" class="form-control" id="fullname" placeholder="Full name" required/>
+          <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email address" required/>
+          <button type="submit" class="btn">Sign Up<i class="fa fa-send"></i></button>
+        </form>
       </div>
-      <div class="social-icons col-md-6 col-sm-12 col-xs-12">    <!-----social media icons----->
+      <div class="contact-info col-lg-3 col-md-4 col-sm-5 col-xs-12">
+        <div class="contact-info-item CII01">
+          <div class="contact-info-item-a">
+            <h4>Email</h4>
+          </div>
+          <div class="contact-info-item-a">
+            <h6>
+              <a href="https://www.google.com/intl/en-GB/gmail/about/" target="_blank">123@holidays.com</a>
+            </h6>
+          </div>
+        </div>
+        <div class="contact-info-item CII02">
+          <div class="contact-info-item-a">
+            <h4>Telephone</h4>
+          </div>
+          <div class="contact-info-item-a">
+            <h6>
+              <a href="https://www.google.com/intl/en-GB/gmail/about/" target="_blank">123****132</a>
+            </h6>
+          </div>
+        </div>
+        <div class="contact-info-item CII02">
+          <div class="contact-info-item-a">
+            <h4>Address</h4>
+          </div>
+          <div class="contact-info-item-a">
+            <h6>
+              <a href="https://www.google.com/intl/en-GB/gmail/about/" target="_blank">132, 123, 123, 123</a>
+            </h6>
+          </div>
+        </div>
+      </div>
+      <div class="hidden-xs col-sm-1 col-md-2"></div>
+    </div>
+    <div class="row">
+      <div class="social-icons col-md-12">            <!-----social media icons----->
         <ul>
           <li><a href="https://en-gb.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
           <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
