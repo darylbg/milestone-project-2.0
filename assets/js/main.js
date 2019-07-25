@@ -49,44 +49,92 @@ var showSlides = () => {
 
 showSlides();
 
+//------pricing slider
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
 //------map apikey and location plotting/labels
 
-function initMap() {
+function initAutocomplete() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: 54, lng: -2 },
-    zoom: 5
+    center: {lat: 54.2361, lng: -4.463196},
+    zoom: 5,
+    mapTypeId: 'roadmap'
   });
 
-  var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  // Create the search box and link it to the UI element.
+  var input = document.getElementById('pac-input');
+  var searchBox = new google.maps.places.SearchBox(input);
+  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-  var locations = [
-    {lat: 51.501364, lng: -0.1418899999999894, info: "marker 1"}, //buckingham palace
-    {lat: 51.4771, lng: -.2854}, //kew gardens
-    {lat: 51.508530, lng: -0.076132}, //tower of london
-    {lat: 51.503399, lng: -0.119519}, //london eye
-    {lat: 58.16844, lng: -5.3037},  //Achmelvich bay
-    {lat: 53.8166700, lng: -3.0500000}, //blackpool
-    {lat: 53.2528, lng: -3.9751}, //llanfairfechan
-    {lat: 50.444496, lng: -5.043433}, //Watergate Bay, Newquay
-    {lat: 50.043404, lng: -5.654000}, //Porthcurno
-    {lat: 51.1739726374, lng: -1.82237671048}, //stone hendge
-    {lat: 51.38107, lng: -2.359616}, //bath, (roman baths)
-    {lat: 53.961697, lng: -1.0823131}, //york minster (cathedral)
-    {lat: 54.4817, lng: -3.1185}, //lake district
-    {lat: 51.279778, lng: 1.0828195}, //canterbury cathedral
-    {lat: 51.426717, lng: -2.356839}, //cotswolds
-    {lat: 54.251186, lng: -4.463196}, //isle of mann
-  ];
+  // Bias the SearchBox results towards current map's viewport.
+  map.addListener('bounds_changed', function() {
+    searchBox.setBounds(map.getBounds());
+  });
 
-  var markers = locations.map(function(location, i) {
-    return new google.maps.Marker({
-      position: location,
-      label: labels[i % labels.length]
+  var markers = [];
+  // Listen for the event fired when the user selects a prediction and retrieve
+  // more details for that place.
+  searchBox.addListener('places_changed', function() {
+    var places = searchBox.getPlaces();
+
+    if (places.length == 0) {
+      return;
+    }
+
+    // Clear out the old markers.
+    markers.forEach(function(marker) {
+      marker.setMap(null);
     });
+    markers = [];
 
+    // For each place, get the icon, name and location.
+    var bounds = new google.maps.LatLngBounds();
+    places.forEach(function(place) {
+      if (!place.geometry) {
+        console.log("Returned place contains no geometry");
+        return;
+      }
+      var icon = {
+        url: place.icon,
+        size: new google.maps.Size(71, 71),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(17, 34),
+        scaledSize: new google.maps.Size(25, 25)
+      };
+
+      // Create a marker for each place.
+      markers.push(new google.maps.Marker({
+        map: map,
+        icon: icon,
+        title: place.name,
+        position: place.geometry.location
+      }));
+
+      if (place.geometry.viewport) {
+        // Only geocodes have viewport.
+        bounds.union(place.geometry.viewport);
+      } else {
+        bounds.extend(place.geometry.location);
+      }
+    });
+    map.fitBounds(bounds);
   });
-
-  var markerCluster = new MarkerClusterer(map, markers,
-            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-
 }
+//------emal api and sending method
+
+(function(){
+   emailjs.init("user_GRrOQRncQg28l0WREJZ3c");
+})();
+
+var template_params = {}
+
+var service_id = "default_service";
+var template_id = "milestone_project_2";
+//emailjs.send(service_id, template_id, template_params);
