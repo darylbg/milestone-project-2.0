@@ -65,19 +65,97 @@
 
   <section id="holiday-selector" class="destination-locator container-fluid">       <!-----holiday location selector section----->
     <div class="row">
-      <div class="holiday col-md-6 col-xs-12">
+      <div class="col-md-2 col-xs-4">
+        <div class="people-count">
+          <h4><i class="fa fa-group"></i>How many people?</h4>
+          <div id="input_div">
+            <input type="button" value="-" id="minus" onclick="minus1()">
+            <input type="text" size="25" value="0" id="count-people" style="border: none; background-color: white;">
+            <input type="button" value="+" id="plus" onclick="plus1()">
+          </div>
+        </div>
+        <div class="rooms-count">
+          <h4><i class="fa fa-hotel"></i>How many rooms?</h4>
+          <div id="input_div">
+            <input type="button" value="-" id="minus" onclick="minus2()">
+            <input type="text" size="25" value="0" id="count-rooms" style="border: none; background-color: white;">
+            <input type="button" value="+" id="plus" onclick="plus2()">
+          </div>
+        </div>
+        <div class="house-type">
+          <h4><i class="fa fa-home"></i>Choose your holiday housing</h4>
+          <label class="container1">Hotel
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container1">Motel
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container1">Inn
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container1">Cottage
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <div class="holiday col-md-4 col-xs-8">
         <div class="date-selector">
           <h2>Pick your holiday dates</h2>
           <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
         </div>
         <div class="slidecontainer">
           <p>Pick your price: £<span id="demo"></span></p>
-          <input type="range" min="50" max="2000" value="50" class="slider" id="myRange">
+          <input type="range" min="0" max="2000" value="50" class="slider" id="myRange">
         </div>
       </div>
-      <div class="col-md-6 col-xs-12 map-ar">
-        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-        <div id="map"></div>                <!-----uk holiday picker map----->
+      <div class="col-md-6 col-xs-12 map-area">
+        <div class="hotel-search">
+          <div id="findhotels">
+            Find hotels in:
+          </div>
+          <div id="locationField">
+            <input id="autocomplete" placeholder="Enter a city" type="text" />
+          </div>
+        </div>
+        <div id="map"></div>
+        <div id="listing">
+          <table id="resultsTable">
+            <tbody id="results"></tbody>
+          </table>
+        </div>
+        <div style="display: none">
+          <div id="info-content">
+            <table>
+              <tr id="iw-url-row" class="iw_table_row">
+                <td id="iw-icon" class="iw_table_icon"></td>
+                <td id="iw-url"></td>
+              </tr>
+              <tr id="iw-address-row" class="iw_table_row">
+                <td class="iw_attribute_name">Address:</td>
+                <td id="iw-address"></td>
+              </tr>
+              <tr id="iw-phone-row" class="iw_table_row">
+                <td class="iw_attribute_name">Telephone:</td>
+                <td id="iw-phone"></td>
+              </tr>
+              <tr id="iw-rating-row" class="iw_table_row">
+                <td class="iw_attribute_name">Rating:</td>
+                <td id="iw-rating"></td>
+              </tr>
+              <tr id="iw-website-row" class="iw_table_row">
+                <td class="iw_attribute_name">Website:</td>
+                <td id="iw-website"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -218,7 +296,8 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7ZJsRD0AbXaD3pFnwt7hsRlzEopnRVOM&libraries=places&callback=initAutocomplete" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7ZJsRD0AbXaD3pFnwt7hsRlzEopnRVOM&libraries=places&callback=initMap"
+        async defer></script>
   <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
