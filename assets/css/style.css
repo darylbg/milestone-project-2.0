@@ -278,33 +278,16 @@ img {
   }
 }
 
-/*-----------------------holiday date section popup calendar----*/
-
-.date-selector {
-  margin-top: 50px;
-  height: 300px;
-  display: block;
-  font-family: 'Roboto', sans-serif;
-  color: #cc5545;
-}
-
-.date-selector input {
-  height: 35px;
-  width: 250px;
-  text-align: center;
-  font-size: 17px;
-  border: 2px solid #2ecc71;
-  border-radius: 2px;
-  font-family: 'Roboto', sans-serif;
-  color: black;
-}
 
 /*-----------------------people/room count inputs----*/
 
-.people-count {
+.count-selectors {
   margin-top: 50px;
+  height: 300px;
+}
+
+.people-count {
   padding-bottom: 25px;
-  border-bottom: 1px solid black;
 }
 
 .people-count h4 {
@@ -320,8 +303,12 @@ img {
 
 .rooms-count {
   margin-top: 25px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid black;
+}
+
+@media (max-width:480px) {
+  .rooms-count {
+    margin-top: 5px;
+  }
 }
 
 .rooms-count h4 {
@@ -344,9 +331,15 @@ img {
   height: 25px;
   text-align: center;
   padding: 0px;
-  vertical-align: middle;
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+  font-size: 18px;
+}
+
+@media (max-width:480px) {
+  #input_div  input {
+    width: 30px;
+    height: 25px;
+  }
 }
 
 #input_div input[type=button] {
@@ -354,7 +347,6 @@ img {
   border: 2px #2ecc71 solid;
   border-radius: 2px;
   color: #2ecc71;
-  font-size: 20px;
   vertical-align: middle;
 }
 
@@ -369,9 +361,16 @@ img {
 }
 
 /*-----------------------holiday house type----*/
-.house-type {
-  margin-top: 25px;
+
+label {
+  font-weight: normal;
+}
+
+.house-selectors {
+  margin-top: 50px;
   text-align: center;
+  border-left: 1px solid black;
+  height: 300px;
 }
 
 .house-type h4 {
@@ -392,12 +391,18 @@ img {
   padding-right: 0px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 18px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width:768px) {
+  .container1 {
+    font-size: 15px;
+  }
 }
 
 .container1 input {
@@ -417,6 +422,13 @@ img {
   background-color: white;
   border: 2px solid #2ecc71;
   margin-left: 25px;
+}
+
+@media (max-width:768px) {
+  .checkmark {
+    margin-left: 0px;
+    float: left;
+  }
 }
 
 .container1:hover input ~ .checkmark {
@@ -449,29 +461,76 @@ img {
   transform: rotate(45deg);
 }
 
-/*-----------------------pricing slider----*/
-.slidecontainer {
-  height: 300px
+/*-----------------------holiday date section popup calendar----*/
+
+.date-selector {
+  margin-top: 50px;
+  display: block;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #cc5545;
+  text-align: center;
+  border-left: 1px solid black;
+  height: 300px;
 }
 
-@media (max-width:899px) {
-  .slidecontainer {
-    height: 150px
+@media (max-width:768px) {
+  .date-selector {
+    border-left: none;
   }
 }
 
-.slidecontainer p {
-  font-size: 25px;
-  margin-top: 10px;
+.date-selector h4 {
+  font-size: 20px;
+}
+
+.date-selector input {
+  height: 30px;
+  width: 250px;
+  text-align: center;
+  font-size: 15px;
+  border: 2px solid #2ecc71;
+  border-radius: 2px;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  margin-top: 35px;
+}
+
+@media (max-width:1100px) {
+  .date-selector input {
+    width: 100%;
+  }
+}
+
+@media (max-width:900px) {
+  .date-selector input {
+    font-size: 13px;
+  }
+}
+
+@media (max-width:480px) {
+  .date-selector input {
+    font-size: 9px;
+  }
+}
+
+/*-----------------------pricing slider----*/
+.slidecontainer {
+  margin-top: 50px;
+  border-left: 1px solid black;
+  text-align: center;
+  height: 300px;
+}
+
+.slidecontainer h4 {
+  font-size: 20px;
   font-family: 'Roboto', sans-serif;
   color: #cc5545;
 }
 
 .slidecontainer input {
   margin-top: 90px;
-  width: 80%;
   float: none;
-  margin-left: 40px;
 }
 
 @media (max-width:768px) {
@@ -493,6 +552,7 @@ img {
 }
 
 .slider::-webkit-slider-thumb {
+  -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
   width: 30px;
@@ -504,6 +564,13 @@ img {
   box-shadow: 2px 1px 1px white;
 }
 
+@media (max-width:900px) {
+  .slider::-webkit-slider-thumb {
+    height: 25px;
+    width: 25px;
+  }
+}
+
 .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
@@ -512,85 +579,21 @@ img {
   cursor: pointer;
 }
 
-/*-----------------------map location selector----*/
-
-.map-area {
-  margin-top: 50px;
-}
-
-#pac-container {
-  padding-bottom: 12px;
-  margin-right: 12px;
-}
-
-.pac-controls {
-  display: inline-block;
-  padding: 5px 11px;
-}
-
-.pac-controls label {
-  font-family: Roboto;
-  font-size: 13px;
-  font-weight: 300;
-}
-
-#pac-input {
-  background-color: #fff;
-  font-family: Roboto;
-  font-size: 15px;
-  font-weight: 300;
-  margin-left: 12px;
-  margin-top: 0px;
-  padding: 0 11px 0 13px;
-  text-overflow: ellipsis;
-  width: 400px;
-  height: 35px;
-  border: 2px solid #2ecc71;
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-}
-
-@media (max-width: 1250px) {
-  #pac-input {
-    width: 300px;
-    padding-left: 0px;
-    margin-left: 0px;
-    text-align: center;
-  }
-}
-
-.gm-style-mtc {
-  float: none !important;
-}
-
-#title {
-  color: #fff;
-  background-color: #4d90fe;
-  font-size: 25px;
-  font-weight: 500;
-  padding: 6px 12px;
-}
-#target {
-  width: 345px;
-}
-
 /*-----------------------map----*/
+
+.row {
+  margin: 0px;
+}
 
 #map {
   width: 100%;
-  height: 600px;
-  margin-top: 40px;
+  height: 700px;
+  margin-top: 100px;
 }
 
-@media (max-width:480px) {
+@media (max-width:1100px) {
   #map {
-    height: 250px;
-  }
-}
-
-@media (max-width:769px) {
-  #map {
-    height: 400px;
+    height: 600px;
   }
 }
 
@@ -601,9 +604,22 @@ img {
   }
 }
 
+@media (max-width:769px) {
+  #map {
+    height: 400px;
+  }
+}
+
+@media (max-width:480px) {
+  #map {
+    height: 250px;
+  }
+}
+
 #listing table {
   font-size: 12px;
 }
+
 .hotel-search {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -615,64 +631,143 @@ img {
   left: 0;
   position: absolute;
   top: 0;
-  width: 440px;
+  width: 100%;
+  margin-top: 50px;
   z-index: 1;
 }
 
 #listing {
-  position: absolute;
-  width: 200px;
-  height: 600px;
+  height: 700px;
   overflow: auto;
   top: 0px;
   cursor: pointer;
   overflow-x: hidden;
-  float: right;
+  margin-top: 20px;
 }
+
+@media (max-width:1100px) {
+  #listing {
+    height: 600px;
+  }
+}
+
+@media (max-width:900px) {
+  #listing {
+    height: 500px;
+  }
+}
+
+@media (max-width:769px) {
+  #listing {
+    height: 400px;
+  }
+}
+
+@media (max-width:480px) {
+  #listing {
+    height: 250px;
+  }
+}
+
+.listings-title p {
+  margin-top: 50px;
+  background-color: #2ecc71;
+  height: 35px;
+  color: white;
+  font-size: 18px;
+  padding-top: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 #findhotels {
   font-size: 14px;
+  margin-left: 15px;
+  background-color: #2ecc71;
+  width: 30%;
+  height: 35px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
 }
+
+#findhotels p {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  padding-top: 5px;
+}
+
+@media (max-width:480px) {
+  #findhotels p {
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 10px;
+  }
+}
+
 #locationField {
   -webkit-box-flex: 1 1 190px;
   -ms-flex: 1 1 190px;
   flex: 1 1 190px;
-  margin: 0 8px;
+  margin: 0px;
+  padding-right: 5px;
+  margin-right: 10px;
 }
+
+#locationField #autocomplete {
+    height: 35px;
+    border: 2px solid #2ecc71;
+    padding-left: 15px;
+    width: 100%;
+}
+
 #controls {
   -webkit-box-flex: 1 1 140px;
   -ms-flex: 1 1 140px;
   flex: 1 1 140px;
 }
+
 #autocomplete {
   width: 100%;
 }
+
 #country {
   width: 100%;
 }
+
 .placeIcon {
   width: 20px;
   height: 34px;
   margin: 4px;
 }
+
 .hotelIcon {
   width: 24px;
   height: 24px;
 }
+
 #resultsTable {
   border-collapse: collapse;
-  width: 240px;
+  width: 100%;
 }
+
 #rating {
   font-size: 13px;
   font-family: Arial Unicode MS;
 }
+
 .iw_table_row {
   height: 18px;
+  width: 100%;
 }
+
 .iw_attribute_name {
   font-weight: bold;
   text-align: right;
 }
+
 .iw_table_icon {
   text-align: right;
 }

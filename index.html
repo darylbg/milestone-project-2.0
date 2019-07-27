@@ -65,7 +65,7 @@
 
   <section id="holiday-selector" class="destination-locator container-fluid">       <!-----holiday location selector section----->
     <div class="row">
-      <div class="col-md-2 col-xs-4">
+      <div class="col-md-3 col-sm-3 col-xs-6 count-selectors">
         <div class="people-count">
           <h4><i class="fa fa-group"></i>How many people?</h4>
           <div id="input_div">
@@ -82,49 +82,57 @@
             <input type="button" value="+" id="plus" onclick="plus2()">
           </div>
         </div>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-6 house-selectors">
         <div class="house-type">
           <h4><i class="fa fa-home"></i>Choose your holiday housing</h4>
           <label class="container1">Hotel
             <input type="checkbox">
             <span class="checkmark"></span>
           </label>
-
           <label class="container1">Motel
             <input type="checkbox">
             <span class="checkmark"></span>
           </label>
-
           <label class="container1">Inn
             <input type="checkbox">
             <span class="checkmark"></span>
           </label>
-
           <label class="container1">Cottage
             <input type="checkbox">
             <span class="checkmark"></span>
           </label>
         </div>
       </div>
-      <div class="holiday col-md-4 col-xs-8">
-        <div class="date-selector">
-          <h2>Pick your holiday dates</h2>
+      <div class="holiday col-md-3 col-sm-3 col-xs-6 date-selector">
+        <div>
+          <h4><i class="fa fa-calendar"></i> Set your holiday dates</h4>
           <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
         </div>
-        <div class="slidecontainer">
-          <p>Pick your price: £<span id="demo"></span></p>
-          <input type="range" min="0" max="2000" value="50" class="slider" id="myRange">
-        </div>
       </div>
-      <div class="col-md-6 col-xs-12 map-area">
+      <div class="slidecontainer holiday col-md-3 col-sm-3 col-xs-6">
+        <h4><i class="fa fa-credit-card"></i> Pick your price: £<span id="demo"></span></h4>
+        <input type="range" min="0" max="2000" value="50" class="slider" id="myRange">
+      </div>
+    </div>
+  </section>
+  <section class="map-picker">
+    <div class="row">
+      <div class="col-lg-9 col-md-8 col-sm-8 col-xs-8 map-area">
         <div class="hotel-search">
           <div id="findhotels">
-            Find hotels in:
+            <p>Find hotels in:</p>
           </div>
           <div id="locationField">
             <input id="autocomplete" placeholder="Enter a city" type="text" />
           </div>
         </div>
         <div id="map"></div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4">
+        <div class="listings-title">
+          <p>Available hotels</p>
+        </div>
         <div id="listing">
           <table id="resultsTable">
             <tbody id="results"></tbody>
@@ -296,8 +304,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7ZJsRD0AbXaD3pFnwt7hsRlzEopnRVOM&libraries=places&callback=initMap"
-        async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7ZJsRD0AbXaD3pFnwt7hsRlzEopnRVOM&libraries=places&callback=initMap" async defer></script>
   <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
