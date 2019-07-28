@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Document</title>
+  <title>Holiday UK</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
@@ -63,11 +63,11 @@
     </div>
   </div>
 
-  <section id="holiday-selector" class="destination-locator container-fluid">       <!-----holiday location selector section----->
-    <div class="row">
+  <section id="holiday-selector" class="container-fluid">       <!-----holiday location selector section----->
+    <div class="row destination-locator">
       <div class="col-md-3 col-sm-3 col-xs-6 count-selectors">
         <div class="people-count">
-          <h4><i class="fa fa-group"></i>How many people?</h4>
+          <h4><span><i class="fa fa-group"></i>How many people?</span></h4>
           <div id="input_div">
             <input type="button" value="-" id="minus" onclick="minus1()">
             <input type="text" size="25" value="0" id="count-people" style="border: none; background-color: white;">
@@ -85,7 +85,7 @@
       </div>
       <div class="col-md-3 col-sm-3 col-xs-6 house-selectors">
         <div class="house-type">
-          <h4><i class="fa fa-home"></i>Choose your holiday housing</h4>
+          <h4><span><i class="fa fa-home"></i>Choose your holiday housing</span></h4>
           <label class="container1">Hotel
             <input type="checkbox">
             <span class="checkmark"></span>
@@ -106,12 +106,12 @@
       </div>
       <div class="holiday col-md-3 col-sm-3 col-xs-6 date-selector">
         <div>
-          <h4><i class="fa fa-calendar"></i> Set your holiday dates</h4>
+          <h4><span><i class="fa fa-calendar"></i>Set your holiday dates</span></h4>
           <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
         </div>
       </div>
       <div class="slidecontainer holiday col-md-3 col-sm-3 col-xs-6">
-        <h4><i class="fa fa-credit-card"></i> Pick your price: £<span id="demo"></span></h4>
+        <h4><span><i class="fa fa-credit-card"></i>Pick your price: £<span id="demo"></span></h4>
         <input type="range" min="0" max="2000" value="50" class="slider" id="myRange">
       </div>
     </div>
