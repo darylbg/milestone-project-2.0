@@ -8,13 +8,11 @@ easily set holiday parameters and visually locate dream vacations with a hotel p
 
 ## UX
 
-	→ The UX for this project is built around minimalism and easy user interface.
-    The user progress in this page naturally flows down from the top starting off with a bright and bold
-    landing page with clear navigation. Continuing down the page has the user setting holiday specifics, picking a location, selecting a feature deal and finally seeing the componay contact info.
+The UX for this project is built around minimalism and easy user interface.
+The user progress in this page naturally flows down from the top starting off with a bright and bold
+landing page with clear navigation. Continuing down the page has the user setting holiday specifics, picking a location, selecting a feature deal and finally seeing the componay contact info.
 
-- As a user type, I want to perform an action, so that I can achieve a goal.
-
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+add wireframes here
 
 ## Features
 
@@ -111,7 +109,7 @@ all content is original
 
 2. Featured holiday card pics source:
 
--https://www.google.com/search?q=night&tbm=isch&tbs=simg:CAQSkgEJveMNs1u_10bgahgELEKjU2AQaAAwLELCMpwgaYQpfCAMSJ-MW5BbACoEVwQqIBPUL9gv9FGu3Kr8quCrmPr4q0zi2KuU-zCKfKxowmPUed9Q06VKxC9Yj0y4eNRyLUPGiC4zem06F5jV_1pyZBgLRGva4t-5Ezapnpp5OHIAQMCxCOrv4IGgoKCAgBEgRV-5_1xDA&sa=X&ved=0ahUKEwiB1vSBodrjAhWQYMAKHY9IARwQwg4ILSgA&biw=1920&bih=947#imgrc=US1qscyB1mggdM:
+- https://www.google.com/search?q=night&tbm=isch&tbs=simg:CAQSkgEJveMNs1u_10bgahgELEKjU2AQaAAwLELCMpwgaYQpfCAMSJ-MW5BbACoEVwQqIBPUL9gv9FGu3Kr8quCrmPr4q0zi2KuU-zCKfKxowmPUed9Q06VKxC9Yj0y4eNRyLUPGiC4zem06F5jV_1pyZBgLRGva4t-5Ezapnpp5OHIAQMCxCOrv4IGgoKCAgBEgRV-5_1xDA&sa=X&ved=0ahUKEwiB1vSBodrjAhWQYMAKHY9IARwQwg4ILSgA&biw=1920&bih=947#imgrc=US1qscyB1mggdM:
 
 - https://www.google.com/search?q=isle+of+skye+town&tbm=isch&tbs=simg:CAQSkwEJIhvGLS1FtHAahwELEKjU2AQaAAwLELCMpwgaYgpgCAMSKNUU0RTQFP0V9xX-FfgV1BT7FbgKuirlPrwquiL_1P-Y-wCq7KsM4zTgaMDwCr8K0g7fteXtAHO3kkWTQfUzVLemwCAQDJeSFd4xXbiVX-9NUntCL1kEY8wihQSAEDAsQjq7-CBoKCggIARIEVsAV3ww&sa=X&ved=0ahUKEwjOu5eQodrjAhXJbsAKHWR6B9YQwg4ILSgA&biw=1920&bih=947#imgrc=htOCekOBAlFEeM:
 
@@ -132,35 +130,3 @@ I received inspiration for parts of this project from:
 - date range picker code from: http://www.daterangepicker.com/
 - google map hotel locator code customized from: https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-hotelsearch
 - email api code customized from: https://www.emailjs.com/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#milestone-project-2.0
-
-###date calendar picker sourced from http://www.daterangepicker.com/
-
-##it usesjQuery, Moment.js and Date Range Picker's files custom css in your webpage
