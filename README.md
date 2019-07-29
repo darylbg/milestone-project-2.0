@@ -12,7 +12,7 @@ The UX for this project is built around minimalism and easy user interface.
 The user progress in this page naturally flows down from the top starting off with a bright and bold
 landing page with clear navigation. Continuing down the page has the user setting holiday specifics, picking a location, selecting a feature deal and finally seeing the componay contact info.
 
-wireframes are located  [here](wireframes/Book1.xlsx)
+wireframes are located:  [here](wireframes/Book1.xlsx)
 
 ## Features
 
