@@ -12,7 +12,7 @@ The UX for this project is built around minimalism and easy user interface.
 The user progress in this page naturally flows down from the top starting off with a bright and bold
 landing page with clear navigation. Continuing down the page has the user setting holiday specifics, picking a location, selecting a feature deal and finally seeing the componay contact info.
 
-add wireframes here
+wireframes are located  [here](wireframes/Book1.xlsx)
 
 ## Features
 
@@ -40,9 +40,6 @@ add wireframes here
 - preselected holiday packages - gives a user the choice for a premade holiday with easy booking
 - business letter sign up - gives a user the option via email api to sign up for promotions and deals
 - contact info - gives clear company contact and social media links and info
-
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
 - Another feature idea - to further the project I would get the data necessary to be able to link the holiday selection criteria with the hotels displayed on the map
@@ -73,7 +70,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
 1. Device size:
   1. Try this website on any device sizes
   2. used the chrome viewport resizer extension to dynamically test the resizing of the website for different devices
-  3. viewport resizer extension: (https://chrome.google.com/webstore/detail/viewport-resizer/kapnjjcfcncngkadhpmijlkblpibdcgm?utm_source=chrome-ntp-icon)
+  3. viewport resizer extension: https://chrome.google.com/webstore/detail/viewport-resizer/kapnjjcfcncngkadhpmijlkblpibdcgm?utm_source=chrome-ntp-icon
 
 2. Browsers:
   1. try the website on different Browsers
