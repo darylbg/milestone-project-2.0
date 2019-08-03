@@ -319,4 +319,4 @@ var template_params = {}
 
 var service_id = "default_service";
 var template_id = "milestone_project_2";
-//emailjs.send(service_id, template_id, template_params);
+emailjs.send(service_id, template_id, template_params);
