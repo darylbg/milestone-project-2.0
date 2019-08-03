@@ -68,13 +68,13 @@ In this section, you should mention all of the languages, frameworks, libraries,
 ## Testing
 
 1. Device size:
-  1. Try this website on any device sizes
-  2. used the chrome viewport resizer extension to dynamically test the resizing of the website for different devices
-  3. viewport resizer extension: https://chrome.google.com/webstore/detail/viewport-resizer/kapnjjcfcncngkadhpmijlkblpibdcgm?utm_source=chrome-ntp-icon
+    1. Try this website on any device sizes
+    2. used the chrome viewport resizer extension to dynamically test the resizing of the website for different devices
+    3. viewport resizer extension: https://chrome.google.com/webstore/detail/viewport-resizer/kapnjjcfcncngkadhpmijlkblpibdcgm?utm_source=chrome-ntp-icon
 
 2. Browsers:
-  1. try the website on different Browsers
-  2. tested on chrome, edge, internet explorer, Firefox
+    1. try the website on different Browsers
+    2. tested on chrome, edge, internet explorer, Firefox
 
 3. Contact form:
     1. Go to the "Contact Us" page
